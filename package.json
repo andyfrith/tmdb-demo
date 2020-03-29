@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "postinstall": "npm run build",
     "start": "node --max_old_space_size=128 --inspect ./build/index.js",
     "test": "npm run build && jest --clearCache && jest --verbose"
   },
