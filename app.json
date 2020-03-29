@@ -1,0 +1,8 @@
+{
+  "name": "The MovieDb Demo",
+  "description": "A barebones Node.js app using Express 4",
+  "repository": "https://github.com/andyfrith/tmdb-demo",
+  "logo": "https://github.com/andyfrith/tmdb-demo/master/public/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
