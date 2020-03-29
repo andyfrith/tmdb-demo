@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "postinstall": "npm run build",
-    "start": "npm run build && node --max_old_space_size=128 --inspect ./build/index.js",
-    "test": "npm run build && jest --clearCache && jest --verbose"
+    "tsc": "tsc",
+    "postinstall": "npm run tsc",
+    "start": "npm run tsc && node --max_old_space_size=128 --inspect ./build/index.js",
+    "test": "npm run tsc && jest --clearCache && jest --verbose"
   },
   "author": "Andy Frith",
   "license": "ISC",
