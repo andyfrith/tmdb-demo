@@ -1,3 +1,27 @@
+import * as bodyParser from "body-parser";
+import * as cors from "cors";
+import * as express from "express";
+import { ENV } from "./env";
+import { logger } from "./logger";
+
+(async () => {
+  logger.info("tmdb-demo service starting", { ENV });
+  const app = express();
+  app.use(cors());
+  app.use(bodyParser.json());
+
+  app.use("/healthy", async (req, res) => {
+    res.send({
+      message: "tbdb-demo is ok"
+    });
+  });
+
+  app.listen({ port: ENV.RUN_PORT }, () => {
+    logger.info(`tbdb-demo listening at :${ENV.RUN_PORT}...`);
+  });
+})();
+
+/*
 const cool = require("cool-ascii-faces");
 const express = require("express");
 const path = require("path");
@@ -40,3 +64,4 @@ showTimes = () => {
   }
   return result;
 };
+*/
