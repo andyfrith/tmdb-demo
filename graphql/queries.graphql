@@ -1,0 +1,30 @@
+type Query {
+  discoverMovies(
+    input: DiscoverMoviesRequest!
+  ): DiscoverMoviesResponse!
+  getMovie(
+    input: GetMovieRequest!
+  ): GetMovieResponse!
+  movies: [Movie]
+}
+
+input DiscoverMoviesRequest {
+  sortDir: SORT_DIR!
+}
+
+type DiscoverMoviesResponse { 
+  movies: [Movie]
+}
+
+input GetMovieRequest {
+  id: Int!
+}
+
+type GetMovieResponse { 
+  movie: Movie
+}
+
+enum SORT_DIR {
+  ASC
+  DESC
+}

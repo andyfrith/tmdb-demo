@@ -1,0 +1,6 @@
+type Movie {
+  id: Int!
+  backdrop_path: String
+  imdb_id: String
+  title: String!
+}
